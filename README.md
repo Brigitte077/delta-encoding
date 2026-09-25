@@ -22,3 +22,10 @@ When storing long sequences of integers that change slowly, such as timestamps o
 ## Edge Cases
 
 The empty sequence encodes to an empty array and decodes back to an empty array. A single value is stored as the value itself with no deltas.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+

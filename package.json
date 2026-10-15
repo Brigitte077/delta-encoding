@@ -1,6 +1,6 @@
 {
   "name": "delta-encoding",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encodes and decodes a sequence of integers as the differences between consecutive values for compact storage.",
   "type": "module",
   "main": "src/index.js",
